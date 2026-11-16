@@ -1,0 +1,19 @@
+# Add `date-released` and `doi` (the Zenodo DOI for the release) when version 0.1.0 is released.
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "Qascade: gradient boosting of small quantum convolutional neural networks"
+authors:
+  - given-names: Suman
+    family-names: Poola
+    email: spoola@imsa.edu
+repository-code: "https://github.com/Suman-Poola/Qascade"
+license: Apache-2.0
+version: "0.1.0"
+keywords:
+  - quantum machine learning
+  - gradient boosting
+  - quantum convolutional neural network
+  - qiskit
+  - scikit-learn
+  - ensemble learning

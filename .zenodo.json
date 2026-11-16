@@ -1,0 +1,20 @@
+{
+  "title": "Qascade: gradient boosting of small quantum convolutional neural networks",
+  "description": "Qascade is a Python library for gradient boosting of small quantum convolutional neural networks (QCNNs), with a scikit-learn API built on Qiskit primitives. It implements Friedman-style functional gradient boosting in which each weak learner is a small parameterised quantum circuit, and it works with a built-in exact simulator or any Qiskit Estimator V2 primitive. It reports circuit cost in hardware-equivalent circuit executions so that training budgets can be compared. It makes no claim of quantum advantage.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "creators": [
+    {
+      "name": "Poola, Suman"
+    }
+  ],
+  "keywords": [
+    "quantum machine learning",
+    "gradient boosting",
+    "quantum convolutional neural network",
+    "qiskit",
+    "scikit-learn",
+    "ensemble learning"
+  ]
+}

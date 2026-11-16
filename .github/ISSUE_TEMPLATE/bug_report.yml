@@ -1,0 +1,66 @@
+name: Bug report
+description: Something does not work as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. A minimal reproducer makes it much faster to fix.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Minimal reproducer
+      description: A short, self-contained script that shows the problem. Include the full traceback if there is one.
+      render: python
+    validations:
+      required: true
+  - type: input
+    id: qascade-version
+    attributes:
+      label: Qascade version
+      description: "Output of `python -c \"import qascade; print(qascade.__version__)\"`."
+    validations:
+      required: true
+  - type: input
+    id: qiskit-version
+    attributes:
+      label: Qiskit version
+    validations:
+      required: true
+  - type: input
+    id: sklearn-version
+    attributes:
+      label: scikit-learn version
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: e.g. Ubuntu 24.04, macOS 15, Windows 11
+    validations:
+      required: true
+  - type: input
+    id: backend
+    attributes:
+      label: Backend / estimator used
+      description: The built-in simulator (default), or the Qiskit Estimator you passed (for example Aer or an IBM Runtime fake backend).
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Other context, such as logs or things you already tried.
