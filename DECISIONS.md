@@ -26,3 +26,4 @@ Each entry is one decision with a one-line rationale. Newest entries go at the b
 | 20 | 2026-11-16 | Cloning an estimator shares the Qiskit primitive by reference; saving a model never writes it. | A backend connection is a shared resource that may not be copyable or serialisable. |
 | 21 | 2026-11-16 | Build backend is hatchling with the version in `src/qascade/_version.py`. | Simple, standard, and has no dependency on git tags at build time. |
 | 22 | 2026-11-16 | The development environment uses Python 3.11, the oldest supported version. | Catches use of newer-only syntax and APIs before CI does. |
+| 23 | 2026-11-16 | The pooling block has two parameters, not the customary three. | The third (an `rz` on the discarded qubit) provably cannot change the readout, and each parameter costs two circuit executions per sample. |

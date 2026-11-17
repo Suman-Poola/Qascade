@@ -173,8 +173,10 @@ qcnn_ansatz(n_qubits: int, *, depth: int | None = None, conv_reps: int = 1,
   rule applies:
   - conv block on (a, b), 3 parameters: `rz(-pi/2, b); cx(b, a); rz(t0, a); ry(t1, b); cx(a, b);
     ry(t2, b); cx(b, a); rz(pi/2, a)`
-  - pool block on (source, sink), 3 parameters: `rz(-pi/2, sink); cx(sink, source);
-    rz(t0, source); ry(t1, sink); cx(source, sink); ry(t2, sink)`
+  - pool block on (source, sink), 2 parameters: `rz(-pi/2, sink); cx(sink, source);
+    ry(t0, sink); cx(source, sink); ry(t1, sink)`. (The usual third parameter, an `rz` on the
+    source before it acts as a control and is discarded, cannot change the readout, so it is left
+    out: every parameter costs two circuit executions per sample under parameter shift.)
 - The active qubits after the last level are stored in `circuit.metadata["readout_qubits"]`.
 
 ```python
